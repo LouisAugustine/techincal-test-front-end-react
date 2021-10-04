@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# BNZ Technical Test - Front End (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello 👋 
 
-## Available Scripts
+Thank you so much for taking the time to interview with us here at BNZ. Before the in-person/remote interview, we'd appreciate if you could begin a small exercise, which will facilitate some discussion during the interview.
 
-In the project directory, you can run:
+The aim of this exercise is to gauge your knowledge of Front End frameworks and browsers. Your time is valuable, so we ask you don't spend more than **30 minutes** coding - we'll use the example you create for review/peer programming during the interview (don't worry if you don't get more than a "hello world" running and only bring some ideas how you might implement this feature).
 
-### `yarn start`
+This isn't a exam, there are no right or wrong solutions. We are more interested in your approach and reasoning behind the decisions you have (or would) implement.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Background
+* BNZ is creating a pattern library website for commonly used patterns of some of our components
+* A **navigation** component is required to be built by a developer (you!)
+* This navigation component will serve as a starting point for our UX Research team, who wish to test the information architecture of the navigation items, before UI designs are created.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Requirements
+* Navigation component takes an array of data (<code>data.js</code>) which displays the name of the item.
+* Navigation items may be **nested** with children
+* No routing or links are required - only display the name of the item for this exercise
+* Each navigation item has an <code>id</code>, <code>name</code> and (optionally) <code>children</code>
+* If an item has children, its respective children should be show a relationship to their parent (e.g. indenting).
 
-### `yarn test`
+An example of a completed navigation list is shown below, but feel free to only use this as a suggestion.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://github.com/bnz-digital/techincal-test-front-end-react/blob/main/IA.png?raw=true" alt="IA image" width="400"/>
 
-### `yarn build`
+## Task
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
+* Create a new React application for the browser
+* Download the <code>data.js</code> file located in this repository and place it inside your application - we'll treat this as our api.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Data
+The <code>data.js</code> file exports one function <code>fetchData()</code>, which should be used instead of an HTTP request (for simplicity of this test). This function simulates a small bit of network delay. We suggest fetching this data from your <code>App.js</code> file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Create Navigation Component
+We suggest creating a reusable component that can be rendered from your <code>App.js</code> component, using the data from the <code>data.js</code> file.
 
-### `yarn eject`
+The Information Architecture in the data looks like this:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Home
+* Alerts
+    * Usage and examples
+    * Alert
+    * Warning Alert
+* Buttons
+    * Usage and Examples
+    * Button
+    * Button Group
+* Forms
+    * Usage and examples
+    * Inputs
+        * Credit Card Input
+        * Number Input
+    * Selectors
+        * Checkbox
+        * Date Picker
+        * Radio
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Submission
+Please push your code to this repository, and let us know when you're done. We'll get the interviewers to have a look over your code before the interview.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Best of luck! 🎉
